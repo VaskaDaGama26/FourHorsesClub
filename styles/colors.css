@@ -1,0 +1,11 @@
+:root {
+  --white: #ffffff;
+  --primary-orange: #f54932;
+
+  /* HeroSection */
+  --hero-bg: #e9ded4;
+
+  /* Footer */
+  --footer-bg: #e9ded4;
+  --footer-text: #7b7672;
+}
