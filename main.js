@@ -25,7 +25,7 @@ const loadComponent = async (name) => {
   if (DEBUG) {
     console.log("Element:", element);
   }
-  
+
   // Load JS, if exists
   try {
     const module = await import(`./components/${name}/${name}.js`);
@@ -52,8 +52,10 @@ async function initApp() {
     "Footer",
   ];
 
-  for (const name of components) {
-    const el = await loadComponent(name);
+  const loadPromises = components.map((name) => loadComponent(name));
+  const elements = await Promise.all(loadPromises);
+
+  for (const el of elements) {
     app.appendChild(el);
   }
 }

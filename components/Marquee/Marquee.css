@@ -22,28 +22,30 @@
   }
 }
 
-.marquee__inner {
-  animation: scroll 12s linear infinite;
-}
-
 .marquee__inner,
 .marquee__item {
   height: fit-content;
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
+}
 
-  .marquee__item p {
-    margin: 0;
-  }
+.marquee__inner {
+  animation: scroll 12s linear infinite;
 
-  .marquee__item::before {
+  &::before {
     content: "";
     display: inline-block;
     width: 6px;
     height: 6px;
     background-color: var(--white);
     border-radius: 999px;
+  }
+}
+
+.marquee__item {
+  & p {
+    margin: 0;
   }
 }
 
