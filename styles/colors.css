@@ -1,6 +1,8 @@
 :root {
   --white: #ffffff;
   --black: #313131;
+  --gray: #d0d0d0;
+  --blue: #3057a2;
   --primary-orange: #f54932;
 
   /* HeroSection */
@@ -20,5 +22,4 @@
 
   /* Footer */
   --footer-bg: #e9ded4;
-  --footer-text: #7b7672;
 }

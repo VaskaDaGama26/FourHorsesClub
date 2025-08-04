@@ -2,3 +2,7 @@ html {
   font-size: 16px;
   background-color: var(--white);
 }
+
+p {
+  margin: 0;
+}

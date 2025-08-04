@@ -32,7 +32,9 @@
 
 .marquee__inner {
   animation: scroll 12s linear infinite;
+}
 
+.marquee__item {
   &::before {
     content: "";
     display: inline-block;
@@ -41,9 +43,6 @@
     background-color: var(--white);
     border-radius: 999px;
   }
-}
-
-.marquee__item {
   & p {
     margin: 0;
   }

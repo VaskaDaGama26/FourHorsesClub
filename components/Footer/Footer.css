@@ -1,7 +1,7 @@
 .footer {
   padding: 40px 20px 60px;
   background-color: var(--footer-bg);
-  color: var(--footer-text);
+  color: var(--black);
   font-family: Golos Text, sans-serif;
   font-size: 1rem;
   line-height: 120%;
@@ -13,6 +13,7 @@
 }
 
 .footer p {
+  opacity: 60%;
   max-width: 1240px;
   margin: 0 auto;
 }

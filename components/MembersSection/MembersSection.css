@@ -1,0 +1,72 @@
+.section-members {
+  max-width: 1240px;
+  margin: 0 auto;
+  padding: 0 1.25rem 6.25rem;
+}
+
+.section-members__heading {
+  max-width: 764px;
+  font-family: Merriweather, sans-serif;
+  font-size: 2.25rem;
+  color: var(--black);
+  line-height: 135%;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin: 0;
+
+  @media (width > 1024px) {
+    font-size: 3.375rem;
+  }
+
+  @media (width < 375px) {
+    font-size: 1.75rem;
+  }
+}
+
+.section-members__card {
+  padding-inline: 2.25rem;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: Golos Text, sans-serif;
+  color: var(--black);
+
+  & .section-members__card-img {
+    max-width: 320px;
+    margin-bottom: 28px;
+  }
+  & .section-members__card-name {
+    margin-bottom: 6px;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 120%;
+  }
+  & .section-members__card-info {
+    margin-bottom: 20px;
+    font-weight: 400;
+    font-size: 1.25rem;
+    opacity: 60%;
+    line-height: 120%;
+  }
+
+  & .section-members__card-more {
+    font-size: 1rem;
+    color: var(--blue);
+    font-weight: 500;
+    line-height: 70%;
+
+    border: 1px solid var(--blue);
+    border-radius: 999px;
+    padding: 0.75rem;
+
+    text-decoration: none;
+  }
+}
+
+.section-members__carousel {
+  display: flex;
+  flex-direction: row;
+  gap: 1.25rem;
+  margin-top: 3.75rem;
+}

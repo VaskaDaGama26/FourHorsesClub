@@ -1,9 +1,10 @@
 .section-hero {
+  overflow: hidden;
   background-color: var(--hero-bg);
-  padding: 1.125rem 1.25rem 2.5rem;
+  padding: 1.125rem 1.25rem 0;
 
   @media (width > 1024px) {
-    padding: 1.625rem 4.5rem 8.25rem;
+    padding: 1.625rem 4.5rem 9.5rem;
   }
 }
 
@@ -165,23 +166,64 @@
   }
 }
 .section-hero__round-wrapper {
-  width: clamp(280px, 100%, 350px);
-  margin: 0 auto;
-  height: 285px;
-  overflow: visible;
-  position: relative;
-
-  @media (width > 1024px) {
-    width: 660px;
-  }
+  width: 100%;
+  height: 300px;
 
   & .section-hero__round {
-    width: 100%;
+    max-width: none;
+    width: auto;
+    height: auto;
     position: absolute;
-    top: -80px;
+    bottom: -15px;
+    right: -140px;
+    transform: translateX(0);
+  }
 
-    @media (width > 1240px) {
-      top: -70px;
-    }
+  @media (width > 1024px) {
+    display: none;
+  }
+}
+
+.section-hero__background-pattern {
+  position: absolute;
+  opacity: 0.3;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 811px;
+  background-image: url("/assets/images/hero/hero-bg-pattern.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (width > 500px) {
+    height: 700px;
+  }
+}
+
+.section-hero__background {
+  display: none;
+  position: absolute;
+  max-width: 1920px;
+  background-image: url("/assets/images/hero/hero-image-desktop.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @media (width > 1024px) {
+    display: block;
+    height: 850px;
+    top: -150px;
+    left: 0;
+    width: 100vw;
+  }
+
+  @media (1920px > width > 1024px) {
+    top: -100px;
+  }
+
+  @media (width > 1920px) {
+    left: 50%;
+    transform: translateX(-50%);
   }
 }
