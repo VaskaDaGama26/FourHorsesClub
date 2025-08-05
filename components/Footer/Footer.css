@@ -1,6 +1,6 @@
 .footer {
-  padding: 40px 20px 60px;
-  background-color: var(--footer-bg);
+  padding: 2.5rem 1.25rem 3.75rem;
+  background-color: var(--beige);
   color: var(--black);
   font-family: Golos Text, sans-serif;
   font-size: 1rem;
@@ -8,12 +8,12 @@
   font-weight: 400;
 
   @media (width > 1024px) {
-    padding: 40px 72px 72px;
+    padding: 2.5rem 4.5rem 4.5rem;
   }
 }
 
 .footer p {
   opacity: 60%;
   max-width: 1240px;
-  margin: 0 auto;
+  margin-inline: auto;
 }

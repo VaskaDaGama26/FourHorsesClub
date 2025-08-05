@@ -180,7 +180,7 @@
   font-weight: 400;
   font-size: 1.125rem;
   line-height: 120%;
-  color: var(--blue);
+  color: var(--primary-blue);
 }
 
 .strikethrough {

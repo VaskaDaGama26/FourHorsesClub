@@ -1,6 +1,6 @@
 .section-hero {
   overflow: hidden;
-  background-color: var(--hero-bg);
+  background-color: var(--beige);
   padding: 1.125rem 1.25rem 0;
 
   @media (width > 1024px) {

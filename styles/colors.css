@@ -1,27 +1,24 @@
 :root {
   --white: #ffffff;
+  --beige: #e9ded4;
   --black: #313131;
   --gray: #d0d0d0;
   --light-gray: #d6d6d6;
-  --blue: #3057a2;
+
+  --primary-blue: #3057a2;
   --primary-orange: #f54932;
   --primary-yellow: #fbce51;
 
   /* HeroSection */
-  --hero-bg: #e9ded4;
-
   --hero-btn-dark-text: #ffffff;
-  --hero-btn-light-text: #1f1f1f;
-
   --hero-btn-dark-text-hover: #1f1f1f;
-  --hero-btn-light-text-hover: #ffffff;
 
   --hero-btn-dark-bg: #1f1f1f;
-  --hero-btn-light-bg: #ffffff;
-
   --hero-btn-dark-bg-hover: #fbce51;
-  --hero-btn-light-bg-hover: #1f1f1f;
 
-  /* Footer */
-  --footer-bg: #e9ded4;
+  --hero-btn-light-text: #1f1f1f;
+  --hero-btn-light-text-hover: #ffffff;
+
+  --hero-btn-light-bg: #ffffff;
+  --hero-btn-light-bg-hover: #1f1f1f;
 }
