@@ -2,6 +2,7 @@
   max-width: 1240px;
   margin: 0 auto;
   padding: 0 1.25rem 6.25rem;
+  position: relative;
 }
 
 .section-members__heading {
@@ -24,25 +25,37 @@
 }
 
 .section-members__card {
-  padding-inline: 2.25rem;
-  width: fit-content;
+  width: 392px;
   display: flex;
   flex-direction: column;
   align-items: center;
   font-family: Golos Text, sans-serif;
   color: var(--black);
 
+  @media (width < 375px) {
+    width: 280px;
+  }
+  @media (width > 768px) {
+    padding-inline: 2.25rem;
+  }
+
   & .section-members__card-img {
     max-width: 320px;
     margin-bottom: 28px;
+
+    @media (width < 375px) {
+      width: 280px;
+    }
   }
   & .section-members__card-name {
+    text-align: center;
     margin-bottom: 6px;
     font-weight: 600;
     font-size: 1.5rem;
     line-height: 120%;
   }
   & .section-members__card-info {
+    text-align: center;
     margin-bottom: 20px;
     font-weight: 400;
     font-size: 1.25rem;
@@ -61,12 +74,90 @@
     padding: 0.75rem;
 
     text-decoration: none;
+    transition: background-color 300ms ease-in-out, color 300ms ease-in-out;
+
+    &:hover {
+      color: var(--white);
+      background-color: var(--blue);
+    }
   }
 }
 
 .section-members__carousel {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+
   display: flex;
   flex-direction: row;
   gap: 1.25rem;
   margin-top: 3.75rem;
+}
+
+.section-members__navigation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2.5rem;
+  padding-right: 0;
+
+  @media (width >= 1024px) {
+    padding-right: 1.25rem;
+    margin-top: 0.75rem;
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+}
+
+.section-members__btn {
+  display: flex;
+  align-items: center;
+  border-radius: 999px;
+
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: var(--black);
+  transition: background-color 300ms ease-in-out;
+
+  &:hover {
+    background-color: var(--primary-yellow);
+  }
+  &:disabled {
+    background-color: var(--light-gray);
+    cursor: default;
+  }
+
+  &.section-members__btn--next {
+    padding: 0.75rem 0.875rem 0.75rem 1.125rem;
+  }
+  &.section-members__btn--prev {
+    padding: 0.75rem 1.125rem 0.75rem 0.875rem;
+  }
+}
+
+.section-members__counter {
+  font-family: Golos Text, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 120%;
+  color: var(--black);
+
+  & .divider,
+  .total {
+    opacity: 60%;
+  }
+}
+
+.arrow-right {
+  transform: rotateY(180deg);
 }

@@ -46,7 +46,6 @@
   @media (width < 1024px) {
     display: flex;
     flex-direction: column;
-    
   }
 
   @media (width > 1024px) {
@@ -93,7 +92,7 @@
 .section-info__list {
   list-style-type: none;
   padding: 0;
-  margin: 2.75rem 0 0;
+  margin: 2.75rem 0 2.5rem;
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -176,7 +175,7 @@
 }
 
 .section-info__hint {
-  margin-top: 2.5rem;
+  cursor: pointer;
   font-family: Golos Text, sans-serif;
   font-weight: 400;
   font-size: 1.125rem;
