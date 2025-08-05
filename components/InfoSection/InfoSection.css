@@ -1,7 +1,7 @@
 .section-info {
-  max-width: 1240px;
+  max-width: 1094px;
   margin: 0 auto;
-  padding: 3rem 1.25rem 8.75rem;
+  padding: 3rem 1.25rem 7.5rem;
 
   @media (width > 1024px) {
     padding: 5rem 4.5rem 12.5rem;

@@ -16,10 +16,10 @@ export function init(element) {
   let index = 0;
   let cardsPerView = 1;
   const gap = 20;
+  let autoScrollInterval;
 
   function getCardsPerView() {
-    if (window.innerWidth >= 1024) return 3;
-    if (window.innerWidth >= 768) return 2;
+    if (window.innerWidth >= 1260) return 3;
     return 1;
   }
 
@@ -54,7 +54,6 @@ export function init(element) {
     scrollToIndex(index);
   }
 
-
   function onScroll() {
     const cardWidth = cards[0].offsetWidth + gap;
     if (!cardWidth) return;
@@ -68,18 +67,37 @@ export function init(element) {
     updateControls();
   }
 
+  function startAutoScroll() {
+    autoScrollInterval = setInterval(() => {
+      if (index + cardsPerView < totalCards) {
+        scrollToIndex(index + cardsPerView);
+      } else {
+        scrollToIndex(0);
+      }
+    }, 4000);
+  }
+
+  function stopAutoScroll() {
+    clearInterval(autoScrollInterval);
+  }
+
+  carousel.addEventListener("mouseenter", stopAutoScroll);
+  carousel.addEventListener("mouseleave", startAutoScroll);
+
   window.addEventListener("resize", () => {
     cardsPerView = getCardsPerView();
     updateView();
   });
 
   nextBtn.addEventListener("click", () => {
+    stopAutoScroll();
     if (index + cardsPerView < totalCards) {
       scrollToIndex(index + cardsPerView);
     }
   });
 
   prevBtn.addEventListener("click", () => {
+    stopAutoScroll();
     if (index - cardsPerView >= 0) {
       scrollToIndex(index - cardsPerView);
     } else {
@@ -87,7 +105,10 @@ export function init(element) {
     }
   });
 
-  window.addEventListener("load", updateView);
+  window.addEventListener("load", () => {
+    updateView();
+    startAutoScroll();
+  });
 
   carousel.addEventListener("scroll", onScroll);
 }

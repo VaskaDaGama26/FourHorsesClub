@@ -1,13 +1,18 @@
 .section-stages {
   padding-inline: 1.25rem;
   padding-bottom: 7.5rem;
-  max-width: 1240px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
 .section-stages__wrapper {
   width: 335px;
   margin: 0 auto;
+
+  @media (width < 375px) {
+    width: 280px;
+    height: 100%;
+  }
 
   @media (width > 1260px) {
     display: none;
@@ -135,7 +140,7 @@
 
   @media (width < 375px) {
     width: 280px;
-    height: fit-content;
+    height: 100%;
   }
 
   & .section-stages__card-list {
