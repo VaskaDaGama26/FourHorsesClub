@@ -48,7 +48,7 @@
   @media (width < 375px) {
     width: 280px;
   }
-  @media (width > 768px) {
+  @media (width > 1260px) {
     padding-inline: 2.25rem;
   }
 
