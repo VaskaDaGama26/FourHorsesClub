@@ -30,8 +30,13 @@
   gap: 0.75rem;
 }
 
+.marquee__group {
+  display: flex;
+  gap: 0.75rem;
+}
+
 .marquee__inner {
-  animation: scroll 12s linear infinite;
+  animation: scroll 24s linear infinite;
 }
 
 .marquee__item {

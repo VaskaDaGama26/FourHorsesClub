@@ -1,11 +1,13 @@
 export function init(element) {
-  console.log("MembersSection init started", element);
+  if (DEBUG) {
+    console.log("MembersSection init started", element);
+  }
 
   const carousel = element.querySelector(".section-members__carousel");
   const cards = element.querySelectorAll(".section-members__card");
   const prevBtn = element.querySelector(".section-members__btn--prev");
   const nextBtn = element.querySelector(".section-members__btn--next");
-  const current = element.querySelector(".current"); // класс в верстке
+  const current = element.querySelector(".current");
   const total = element.querySelector(".total");
 
   const totalCards = cards.length;
@@ -52,16 +54,14 @@ export function init(element) {
     scrollToIndex(index);
   }
 
-  // Обработка ручного скролла
+
   function onScroll() {
     const cardWidth = cards[0].offsetWidth + gap;
     if (!cardWidth) return;
 
-    // Вычисляем индекс по scrollLeft с округлением
     const scrollLeft = carousel.scrollLeft;
     index = Math.round(scrollLeft / cardWidth);
 
-    // Корректируем индекс, чтобы не выйти за границы
     if (index < 0) index = 0;
     if (index > totalCards - cardsPerView) index = totalCards - cardsPerView;
 
