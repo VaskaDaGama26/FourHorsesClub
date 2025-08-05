@@ -260,7 +260,7 @@
 
 .paper-bg {
   background: no-repeat;
-  background-image: url("/assets/images/stages/stages-bg.png");
+  background-image: url("../../assets/images/stages/stages-bg.png");
   background-size: cover;
 }
 
